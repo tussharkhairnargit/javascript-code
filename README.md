@@ -1,1 +1,4 @@
-# javascript-code
+# Javascript Code
+
+https://javascript.info/
+
