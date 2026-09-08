@@ -1,0 +1,1 @@
+export { roles, isValidRole } from './domain/role';
