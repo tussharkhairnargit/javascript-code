@@ -1,4 +1,4 @@
-profileStatusList = [
+let profileStatusList = [
     { label: 'General Information', key: 'personalInformation', code: 'PERSONAL_INFORMATION', display: true, complete: false, panel: 'personalInformationPanel', stepNumber: 1 },
     { label: 'Resume', key: 'resume', code: 'RESUME', display: false, complete: false, panel: 'resumePanel', stepNumber: 2 },
     { label: 'Credentials', key: 'certifications', code: 'CERTIFICATION_CREDENTIAL', display: false, complete: false, panel: 'credentialsCertificatesPanel', stepNumber: 3 },
@@ -8,9 +8,9 @@ profileStatusList = [
     { label: 'Complete & Sign', key: 'completeAndSubmit', code: 'APPLICATION_OF_EMPLOYMENT', display: false, complete: false, panel: 'aoePanel', stepNumber: 8 }
 ];
 
+
 function getPhysicianOfferingProfileSectionsList() {
-    const requiredSectionKeys = ['personalInformation', 'resume', 'completeAndSubmit'];
-    return this.profileStatusList.filter(ele => requiredSectionKeys.includes(ele.key));
+    return profileStatusList.filter(ele => ['personalInformation', 'resume', 'completeAndSubmit'].includes(ele.key));
 }
 
 console.log("getPhysicianOfferingProfileSectionsList", JSON.stringify(getPhysicianOfferingProfileSectionsList(), null, 2));
