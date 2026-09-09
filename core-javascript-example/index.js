@@ -11,7 +11,7 @@ function defineSectionElement() {
     return `
     <p>
     This is simple tempalte , injected through javascript code.
-    <p>
+    </p>
        <strong style="background-color: yellow">
     This is simple tempalte , injected through javascript code.
     <strong>
