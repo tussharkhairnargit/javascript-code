@@ -1,0 +1,13 @@
+<strong> What is the primary purpose of a base case in a recursive JavaScript function? </strong>
+
+To stop the recursion and return a concrete value without making another recursive call.
+The base case provides a condition where the function can resolve directly, halting the chain of recursive calls.
+
+<strong>If a recursive function in JavaScript completely lacks a base case, what specific type of error will it throw when executed?</strong>
+RangeError: Maximum call stack size exceeded
+Without a base case, the function keeps pushing new execution contexts onto the call stack indefinitely until it overflows.
+
+
+<strong>>According to the ECMAScript specification and V8 engine implementation status,what is the current runtime behavior of proper tail calls (PTC) in standard Chrome execution?</strong>
+V8 does not implement Tail Call Optimization in standard execution, meaning tail-recursive functions still consume O(n) stack space and can trigger a RangeError.
+Major JavaScript engines like V8 do not support standard TCO, requiring manual iteration or trampolining for deep recursion.
