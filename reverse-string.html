@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+
+<body>
+    <main>
+        <h1 id="fullname"> Three Two One</h1>
+      
+        <script>
+            // Reverse string 
+            const ele = document.getElementById("fullname");
+            const fullname = ele.textContent.trim()
+
+            let reverseContent = '';
+           
+            for(let i=0; i < fullname.length; i++){
+                    reverseContent += fullname[(fullname.length -1) - i];
+            }
+            console.log("reverseContent", reverseContent); // we are not spliting by words simply serversed 
+            //Using Spread operator        
+            const reversedUsingSpreadOperator = [...fullname].reverse().join(''); // This will reverse by character as you do not define split strategy , 
+            // it simply spreds all the characters in array resulting individual array element.
+            // document.writeln = reversed
+
+            let h4 = document.createElement('h4');
+            h4.innerText = reversedUsingSpreadOperator;
+            document.body.appendChild(h4)
+            console.log(h4.innerHTML)
+            // Append it to the DOM (e.g., to the body)
+
+            // Split by words 
+            // To reverse string we convert string into array, string dont have reverse function as it is immutable, 
+            // converting string into an array provides us array based reverse function. 
+            // string has split fucntion , it takes criteria to split string converting into an array, 
+
+            let reveredName = fullname.split(" ").reverse().join(" ") // reverse word order
+                ele.textContent += `\u2192    ${reveredName} `;
+            //ele.innerText  += `  ${reveredName} `
+            console.log(` reversed fullname  ${reveredName} `);
+            document.title = reveredName;
+
+             let h2 = document.createElement('h2');
+                 h2.innerHTML = `<span style="color:blue"> ${reveredName }</<span>`;
+                // document.body.appendChild(h2)
+                 console.log(h2.innerHTML)
+                  h4.after(h2)
+            
+        </script>
+        <div> Check console</div>
+    </main>
+</body>
+</html>
