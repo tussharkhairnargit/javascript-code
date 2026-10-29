@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    // Core Backend & Runtime Development
+    "ms-vscode.vscode-typescript-next",
+    "christian-kohler.npm-intellisense",
+    "eg2.vscode-npm-script",
+    
+    // Frontend Integration (Angular & Web UI)
+    "angular.ng-template",
+    "ecmel.vscode-html-css",
+    "formulahendry.auto-rename-tag",
+    
+    // Code Quality, Formatting & Linting
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    
+    // Databases, Environment & Infrastructure
+    "cweijan.vscode-mysql-client2",
+    "ms-azuretools.vscode-docker",
+    "mkhl.direnv",
+    
+    // Testing & API Utilities
+    "humao.rest-client"
+  ]
+}
